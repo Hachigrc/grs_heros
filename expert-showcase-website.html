@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>グラレコヒーローズ | あなたのヒーロー集結！</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-bg"></div>
+    <div class="header-content">
+      <h1>あなたのヒーロー集結！</h1>
+      <div class="subtitle">あなたの想いをかたちにする、グラレコのエキスパートたち</div>
+    </div>
+  </header>
+  
+  <div class="container">
+    <div class="audience-toggle">
+      <button class="toggle-btn active" onclick="toggleAudience('all')">すべて表示</button>
+      <button class="toggle-btn" onclick="toggleAudience('personal')">個人向け</button>
+      <button class="toggle-btn" onclick="toggleAudience('business')">企業向け</button>
+    </div>
+    
+    <div class="categories">
+      <button class="category-btn active" onclick="filterCategory('all')">すべて</button>
+      <button class="category-btn" onclick="filterCategory('medical')">医療・福祉</button>
+      <button class="category-btn" onclick="filterCategory('portrait')">似顔絵</button>
+      <button class="category-btn" onclick="filterCategory('manga')">漫画</button>
+      <button class="category-btn" onclick="filterCategory('love')">愛</button>
+      <button class="category-btn" onclick="filterCategory('animation')">ホワイトボードアニメーション</button>
+      <button class="category-btn" onclick="filterCategory('collab')">コラボ企画</button>
+    </div>
+    
+    <div class="segment">
+      <h2>グラレコヒーローたち</h2>
+      <div class="experts-grid">
+        <!-- 愛ちゃん -->
+        <div class="expert-card" data-categories="medical love" data-audience="all">
+          <div class="expert-img">
+            🌸
+          </div>
+          <div class="expert-info">
+            <h3 class="expert-name">愛ちゃん</h3>
+            <div class="expert-specialty">医療・福祉のわかりやすい翻訳者</div>
+            <p class="expert-desc">
+              医療・福祉の現場経験を活かし、難しいことをやさしく伝えるエキスパート。
+              人の魅力に気づき、やさしい言葉でそっと光を当てます。
+            </p>
+            <div class="expert-tags">
+              <span class="tag">医療・福祉</span>
+              <span class="tag">図解</span>
+              <span class="tag">やさしい言葉</span>
+              <span class="tag">コミュニケーション</span>
+            </div>
+            <a href="#ai-profile" class="btn">詳しく見る</a>
+          </div>
+        </div>
+        
+        <!-- いくみん -->
+        <div class="expert-card" data-categories="portrait manga" data-audience="all">
+          <div class="expert-img">
+            🌱
+          </div>
+          <div class="expert-info">
+            <h3 class="expert-name">いくみん</h3>
+            <div class="expert-specialty">ストーリーを絵にする達人</div>
+            <p class="expert-desc">
+              話を聞いて流れを整理し、似顔絵や漫画を通してその人らしさを表現。
+              見るとあたたかい気持ちになる作品を生み出します。
+            </p>
+            <div class="expert-tags">
+              <span class="tag">似顔絵</span>
+              <span class="tag">漫画</span>
+              <span class="tag">ストーリー</span>
+              <span class="tag">共感</span>
+            </div>
+            <a href="#ikumin-profile" class="btn">詳しく見る</a>
+          </div>
+        </div>
+        
+        <!-- こりさん -->
+        <div class="expert-card" data-categories="portrait collab" data-audience="all">
+          <div class="expert-img">
+            🎨
+          </div>
+          <div class="expert-info">
+            <h3 class="expert-name">こりさん</h3>
+            <div class="expert-specialty">人の魅力を"見えるカタチ"にする人</div>
+            <p class="expert-desc">
+              似顔絵×グラレコ×インタビューで、「あなたってこんなに素敵だよ！」を
+              届ける表現者。外側も内側も、"あなたらしさ"をまるごと描きます。
+            </p>
+            <div class="expert-tags">
+              <span class="tag">似顔絵</span>
+              <span class="tag">グラレコ</span>
+              <span class="tag">インタビュー</span>
+              <span class="tag">コラボ力</span>
+            </div>
+            <a href="#kori-profile" class="btn">詳しく見る</a>
+          </div>
+        </div>
+        
+        <!-- トモローさん -->
+        <div class="expert-card" data-categories="medical animation" data-audience="all">
+          <div class="expert-img">
+            ☀️
+          </div>
+          <div class="expert-info">
+            <h3 class="expert-name">トモローさん</h3>
+            <div class="expert-specialty">医療ケア児ママの視点を活かすクリエイター</div>
+            <p class="expert-desc">
+              医療ケア児のママとして、リアルで細やかな視点から情報を整理。
+              難しい・専門的な情報を、やさしく・かわいく視覚化します。
+            </p>
+            <div class="expert-tags">
+              <span class="tag">医療ケア児</span>
+              <span class="tag">グラレコ</span>
+              <span class="tag">イラスト</span>
+              <span class="tag">わかりやすさ</span>
+            </div>
+            <a href="#tomoro-profile" class="btn">詳しく見る</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section-divider">
+    <div class="wave"></div>
+  </div>
+  
+  <div class="container concern-section">
+    <div class="segment">
+      <h2>あなたの悩みは？</h2>
+      <p>ニーズに合わせたエキスパートをご紹介します</p>
+      
+      <div class="concerns-grid">
+        <div class="concern-card">
+          <div class="concern-icon">🏥</div>
+          <h3 class="concern-title">医療情報を伝えたい</h3>
+          <p>専門用語を一般の方にもわかりやすく</p>
+          <a href="#" class="btn" onclick="filterCategory('medical')">エキスパートを見る</a>
+        </div>
+        
+        <div class="concern-card">
+          <div class="concern-icon">💼</div>
+          <h3 class="concern-title">企業プレゼンを魅力的に</h3>
+          <p>会議やセミナーの内容を視覚的に記録</p>
+          <a href="#" class="btn" onclick="filterCategory('animation')">エキスパートを見る</a>
+        </div>
+        
+        <div class="concern-card">
+          <div class="concern-icon">👨‍👩‍👦</div>
+          <h3 class="concern-title">育児・子育ての経験を形に</h3>
+          <p>家族の思い出や成長を記録したい</p>
+          <a href="#" class="btn" onclick="filterCategory('manga')">エキスパートを見る</a>
+        </div>
+        
+        <div class="concern-card">
+          <div class="concern-icon">🎁</div>
+          <h3 class="concern-title">特別なギフトを贈りたい</h3>
+          <p>世界に一つだけのオリジナル作品</p>
+          <a href="#" class="btn" onclick="filterCategory('portrait')">エキスパートを見る</a>
+        </div>
+        
+        <div class="concern-card">
+          <div class="concern-icon">🤝</div>
+          <h3 class="concern-title">新しい形の企画がしたい</h3>
+          <p>占いやパーソナルカラーとのコラボも</p>
+          <a href="#" class="btn" onclick="filterCategory('collab')">エキスパートを見る</a>
+        </div>
+        
+        <div class="concern-card">
+          <div class="concern-icon">💗</div>
+          <h3 class="concern-title">想いが伝わる言葉が欲しい</h3>
+          <p>心に響く言葉で気持ちを届ける</p>
+          <a href="#" class="btn" onclick="filterCategory('love')">エキスパートを見る</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 個別プロフィールセクション -->
+  <div class="container">
+    <!-- 愛ちゃんプロフィール -->
+    <div id="ai-profile" class="segment">
+      <h2>愛ちゃんプロフィール</h2>
+      <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow);">
+        <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 1rem;">
+          🌸 愛ちゃんのまとめ
+        </h3>
+        <blockquote style="border-left: 4px solid var(--primary); padding-left: 1rem; margin: 1.5rem 0; font-style: italic;">
+          <p><strong>人の魅力に気づき、<br>やさしい言葉でそっと光を当てる。</strong><br>
+          医療・福祉の経験と"伝える力"を活かして、<br>
+          人と人、サービスと想いをつなぐ、あたたかい架け橋に。</p>
+        </blockquote>
+        
+        <h4 style="color: var(--secondary); margin-top: 2rem;">🔹 得意なこと・できること</h4>
+        <ul style="list-style-type: none; padding-left: 1rem; margin: 1rem 0;">
+          <li>✓ 相手の"良さ"や"本質"を見つけて言葉にする</li>
+          <li>✓ 難しいことをやさしく、わかりやすく伝える（図解・言葉）</li>
+          <li>✓ 福祉・医療の現場経験からくるリアルな視点</li>
+          <li>✓ 話を整理してまとめる、伝わる形にする</li>
+          <li>✓ 人の話をじっくり聴き、あたたかく返すコミュニケーション力</li>
+        </ul>
+        
+        <h4 style="color: var(--secondary); margin-top: 1.5rem;">🔹 愛ちゃんが大切にしていること</h4>
+        <ul style="list-style-type: none; padding-left: 1rem; margin: 1rem 0;">
+          <li>✓ 「わかり合うこと」「つながること」「安心できる場」</li>
+          <li>✓ 無理に描かない、自分の"あり方"で伝えていくこと</li>
+          <li>✓ 人の言葉に耳を傾け、その奥にある気持ちに寄り添うこと</li>
+          <li>✓ 自分が発する言葉に"愛"を込めること</li>
+        </ul>
+        
+        <h4 style="color: var(--secondary); margin-top: 1.5rem;">🔹 めざす未来・やりたいこと</h4>
+        <ul style="list-style-type: none; padding-left: 1rem; margin: 1rem 0;">
+          <li>✓ 医療・福祉の"わかりにくさ"をやさしい言葉と図解で翻訳する</li>
+          <li>✓ サービスを「これから使う人」と「提供する人」をつなぐ役割になる</li>
+          <li>✓ 福祉を学ぶ学生や高校生に、リアルな現場のやりがいを伝える</li>
+          <li>✓ 自分の表現で「人と心をつなぐこと」を続けていく</li>
+        </ul>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="#" class="btn">お問い合わせする</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- いくみんプロフィール -->
+    <div id="ikumin-profile" class="segment">
+      <h2>いくみんプロフィール</h2>
+      <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow);">
+        <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 1rem;">
+          🌱 いくみんのまとめ
+        </h3>
+        
+        <h4 style="color: var(--secondary); margin-top: 1.5rem;">🌱 機能的価値（できること・役に立つこと）</h4>
+        <ul style="list-style-type: none; padding-left: 1rem; margin: 1rem 0;">
+          <li>✓ ストーリーを絵にするのが得意</li>
+          <li>✓ 話を聞いて、流れを整理して描ける</li>
+          <li>✓ 似顔絵でその人っぽさを出せる</li>
+          <li>✓ 漫画も描けるから、ちょっとしたドラマにできる</li>
+        </ul>
+        
+        <h4 style="color: var(--secondary); margin-top: 1.5rem;">😊 情緒的価値（見た人が感じること）</h4>
+        <ul style="list-style-type: none; padding-left: 1rem; margin: 1rem 0;">
+          <li>✓ 「あ〜こういう人いるよね」って共感できる</li>
+          <li>✓ 話をちゃんと聞いてもらえた感じがする</li>
+          <li>✓ 見るとちょっとあたたかい気持ちになる</li>
+          <li>✓ 自分のことが少し好きになれるかも</li>
+        </ul>
+        
+        <h4 style="color: var(--secondary); margin-top: 1.5rem;">🎨 自己表現価値（自分らしさ）</h4>
+        <ul style="list-style-type: none; padding-left: 1rem; margin: 1rem 0;">
+          <li>✓ 看護系だけど、そっちに寄せすぎずにやりたい</li>
+          <li>✓ 中ぶらりんだけど、その分いろんなとこに行ける</li>
+          <li>✓ 人の話の中にある"ちょっといい話"を拾いたい</li>
+          <li>✓ ストーリーを描くのがやっぱり好き</li>
+        </ul>
+        
+        <h4 style="color: var(--secondary); margin-top: 1.5rem;">🤝 社会的価値（誰かの役に立つこと）</h4>
+        <ul style="list-style-type: none; padding-left: 1rem; margin: 1rem 0;">
+          <li>✓ 話すのが得意じゃない人の代わりに、伝える手助けができる</li>
+          <li>✓ 一人ひとりの経験が「ちゃんと価値がある」って伝えられる</li>
+          <li>✓ 見える形にすることで、人と人をつなげられるかもしれない</li>
+        </ul>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="#" class="btn">お問い合わせする</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- こりさんプロフィール -->
+    <div id="kori-profile" class="segment">
+      <h2>こりさんプロフィール</h2>
+      <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow);">
+        <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 1rem;">
+          🎨 こりさんの魅力まとめ
+        </h3>
+        
+        <h4 style="color: var(--secondary); margin-bottom: 1rem;">✨人の魅力を"見えるカタチ"にする人</h4>
+        <p>似顔絵 × グラレコ × インタビューで、<br>
+        <strong>「あなたってこんなに素敵だよ！」</strong>を届ける表現者。<br>
+        外側も内側も、"あなたらしさ"をまるごと描きます。</p>
+        
+        <h4 style="color: var(--secondary); margin-top: 1.5rem;">🛠 できること（こりさんのスキル）</h4>
+        <ul style="list-style-type: none; padding-left: 1rem; margin: 1rem 0;">
+          <li>✓ 🧑‍🎨 <strong>似顔絵</strong>：似てるけど、やさしくてかわいい<br>
+            　→ 怖い人も、ふんわりキャラに変わる魔法</li>
+          <li>✓ 🧠 <strong>インタビュー＆編集</strong>：話を聞いて「その人らしさ」を引き出すプロ</li>
+          <li>✓ 🖍 <strong>グラレコ</strong>：話や想いを、わかりやすく絵と図で可視化</li>
+          <li>✓ 🎯 <strong>強み発掘＆目標整理</strong>：相手の中にある"点"を"線"にするサポート</li>
+          <li>✓ 🤝 <strong>コラボ力</strong>：占い・パーソナルカラー・カウンセラーなどと柔軟に組める</li>
+        </ul>
+        
+        <h4 style="color: var(--secondary); margin-top: 1.5rem;">💖 こりさんのスタイル</h4>
+        <ul style="list-style-type: none; padding-left: 1rem; margin: 1rem 0;">
+          <li>✓ 押しつけない。<strong>「あなたが選ぶ」スタイル</strong></li>
+          <li>✓ 「できること、いっぱいあるよ。どれが今のあなたに合いそう？」と一緒に考える</li>
+          <li>✓ 好奇心旺盛、初動が早い、"つい動いちゃう"タイプ</li>
+          <li>✓ AIにはできない、"人の目
